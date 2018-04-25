@@ -6,6 +6,7 @@ It's all in the name. ☺ Downloads from youtube and uploads to ipfs.
 
 * Installation
 * Usage
+* Feedback
 
 ### Installation
 
