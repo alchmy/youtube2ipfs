@@ -29,7 +29,7 @@ module.exports = function youtube2Ipfs( youtube_url, ipfsServerInfo = ipfsServer
     );
     video.on('info', function(info) {
         console.log(chalk.green('--Download started--'));
-        console.log(chalk.green("src url:    ") + info._filename);
+        console.log(chalk.green("src:        ") + youtube_url);
         console.log(chalk.green("path:       ") + info._filename);
         filename=info._filename;
         video.pipe(
@@ -43,8 +43,7 @@ module.exports = function youtube2Ipfs( youtube_url, ipfsServerInfo = ipfsServer
                         content: data
                     }], 
                     function (err, files){
-                        console.log( chalk.green("path:       ") + files[0].path );
-                        console.log( chalk.green("target url: ") + ipfs_base_url + "/" + files[0].hash );
+                        console.log( chalk.green("dest:       ") + ipfs_base_url + "/" + files[0].hash );
                         console.log( chalk.green("size:       ") + bytesToSize(files[0].size) );
                     }
                 )
