@@ -30,7 +30,7 @@ module.exports = function youtube2Ipfs( youtube_url, ipfsServerInfo = ipfsServer
         { cwd: __dirname }
     );
     video.on('info', function(info) {
-        console.log(chalk.green('--Download started--'));
+        console.log(chalk.green('❰❰--Download started--❱❱'));
         console.log(chalk.green("src:        ") + youtube_url);
         console.log(chalk.green("local:      ") + info._filename);
         filename=info._filename;
