@@ -19,7 +19,7 @@ var ipfsServerInfo = {
 var ipfs_base_url = "https://ipfs.io/ipfs"
 
 module.exports = function youtube2Ipfs( youtube_url, ipfsServerInfo = ipfsServerInfo){ 
-    console.log(chalk.yellow("looking for file..."));
+    console.log(chalk.yellow("looking up file..."));
 
     var ipfs=ipfsAPI( ipfsServerInfo);
     var filename;
