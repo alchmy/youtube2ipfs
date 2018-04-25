@@ -1,6 +1,6 @@
 {
   "name": "@alchmy/youtube2ipfs",
-  "version": "0.0.142",
+  "version": "0.0.143",
   "description": "downloads from youtube and uploads to ipfs",
   "main": "index.js",
   "scripts": {
