@@ -19,6 +19,8 @@ var ipfsServerInfo = {
 var ipfs_base_url = "https://ipfs.io/ipfs"
 
 module.exports = function youtube2Ipfs( youtube_url, ipfsServerInfo = ipfsServerInfo){ 
+    console.log(chalk.green("looking for file..."));
+
     var ipfs=ipfsAPI( ipfsServerInfo);
     var filename;
 
@@ -30,7 +32,7 @@ module.exports = function youtube2Ipfs( youtube_url, ipfsServerInfo = ipfsServer
     video.on('info', function(info) {
         console.log(chalk.green('--Download started--'));
         console.log(chalk.green("src:        ") + youtube_url);
-        console.log(chalk.green("path:       ") + info._filename);
+        console.log(chalk.green("local:      ") + info._filename);
         filename=info._filename;
         video.pipe(
             fs.createWriteStream(filename)
