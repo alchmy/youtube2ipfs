@@ -7,6 +7,6 @@ for arg in "$@"; do
 done
 
 exec_file="`dirname $0`/../lib/node_modules/@alchmy/youtube2ipfs/lib/youtube2ipfs-cli.js"
-echo ${exec_file}
+
 node ${exec_file} ${args_string}
 

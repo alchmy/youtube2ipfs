@@ -13,6 +13,7 @@
   "author": "Raymond Smith <raymond@lucentmonkey.com> (alchmy.github.io)",
   "license": "GPL-3.0",
   "dependencies": {
+    "chalk": "^2.4.0",
     "commander": "^2.15.1",
     "ipfs-api": "^20.0.1",
     "youtube-dl": "^1.12.2"

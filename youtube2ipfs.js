@@ -1,6 +1,7 @@
-var fs = require('fs');
-var youtubedl = require('youtube-dl');
-var ipfsAPI = require('ipfs-api');
+const fs = require('fs');
+const youtubedl = require('youtube-dl');
+const ipfsAPI = require('ipfs-api');
+const chalk = require('chalk');
 
 function bytesToSize(bytes) {
     let sizes = ['Bytes', 'KB', 'MB'];
@@ -20,17 +21,16 @@ var ipfs_base_url = "https://ipfs.io/ipfs"
 module.exports = function youtube2Ipfs( youtube_url, ipfsServerInfo = ipfsServerInfo){ 
     var ipfs=ipfsAPI( ipfsServerInfo);
     var filename;
-    console.log("youtube_url: " + youtube_url);
-    console.log("ipfsServerInfo: " + ipfsServerInfo);
+
     var video = youtubedl(
         youtube_url, 
         ['--format=18'],
         { cwd: __dirname }
     );
     video.on('info', function(info) {
-        console.log('Download started');
-        console.log('filename: ' + info._filename);
-        console.log('size: ' + info.size);
+        console.log(chalk.green('--Download started--'));
+        console.log(chalk.green("src url:    ") + info._filename);
+        console.log(chalk.green("path:       ") + info._filename);
         filename=info._filename;
         video.pipe(
             fs.createWriteStream(filename)
@@ -43,9 +43,9 @@ module.exports = function youtube2Ipfs( youtube_url, ipfsServerInfo = ipfsServer
                         content: data
                     }], 
                     function (err, files){
-                        console.log( "path: " + files[0].path );
-                        console.log( "url: " + ipfs_base_url + "/" + files[0].hash );
-                        console.log( "size: " + bytesToSize(files[0].size) );
+                        console.log( chalk.green("path:       ") + files[0].path );
+                        console.log( chalk.green("target url: ") + ipfs_base_url + "/" + files[0].hash );
+                        console.log( chalk.green("size:       ") + bytesToSize(files[0].size) );
                     }
                 )
             })
