@@ -1,6 +1,6 @@
 {
   "name": "@alchmy/youtube2ipfs",
-  "version": "0.0.1482",
+  "version": "0.0.1483",
   "description": "downloads from youtube and uploads to ipfs",
   "main": "index.js",
   "scripts": {
@@ -30,5 +30,6 @@
   "repository": {
       "type": "git",
       "url": "https://github.com/alchmy/youtube2ipfs"
-  }
+  },
+  "license": "GPL-3.0"
 }
