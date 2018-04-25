@@ -1,15 +1,20 @@
 {
   "name": "@alchmy/youtube2ipfs",
-  "version": "0.0.147",
+  "version": "0.0.148",
   "description": "downloads from youtube and uploads to ipfs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "youtube2ipfs": "lib/youtube2ipfs-cli.sh"
+    "youtube2ipfs": "lib/youtube2ipfs.sh"
   },
-  "keywords": [],
+  "keywords": [
+    "ipfs",
+    "youtube",
+    "download",
+    "upload"
+  ],
   "author": "Raymond Smith <raymond@lucentmonkey.com> (alchmy.github.io)",
   "license": "GPL-3.0",
   "dependencies": {
