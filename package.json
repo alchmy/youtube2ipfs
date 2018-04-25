@@ -1,6 +1,6 @@
 {
   "name": "@alchmy/youtube2ipfs",
-  "version": "0.0.148",
+  "version": "0.0.1481",
   "description": "downloads from youtube and uploads to ipfs",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,9 @@
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/alchmy/youtube2ipfs"
+  }
 }

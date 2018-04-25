@@ -1,4 +1,4 @@
-#youtube2ipfs
+# youtube2ipfs
 
 It's all in the name. ☺ Downloads from youtube and uploads to ipfs.
 
