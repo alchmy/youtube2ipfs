@@ -4,9 +4,9 @@ It's all in the name. ☺ Downloads from youtube and uploads to ipfs.
 
 ## Summary
 
-* Installation
-* Usage
-* Feedback
+* [Installation](#user-content-installation)
+* [Usage](#user-content-usage)
+* [Feedback](#user-content-feedback)
 
 ### Installation
 
