@@ -14,6 +14,15 @@ It's all in the name. ☺ Downloads from youtube and uploads to ipfs.
 npm install --global @alchmy/youtube2ipfs
 ```
 
+If you need to install a daemon to receive the ipfs files. This will download ipfs, install it, and set it up as a service that automatically restarts on reboot.
+```bash
+git clone https://github.com/alchmy/librarian.git
+cd librarian
+chmod +x ipfs-linux-install.sh
+./ipfs-linux-install
+```
+
+
 ### Usage
 
 #### Basic
